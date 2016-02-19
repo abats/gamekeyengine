@@ -1,0 +1,10 @@
+/.idea
+vendor
+node_modules
+
+.env
+composer.lock
+/backend/.idea
+.sass-cache
+frontend/fonts/
+frontend/css
