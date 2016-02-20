@@ -8,10 +8,9 @@ var config = {
     nodeDir: './node_modules'
 }
 
-// define tasks here
-gulp.task('default', function(){
-    // run tasks here
-    // set up watch handlers here
+//Watch task
+gulp.task('default',function() {
+    gulp.watch('./resources/sass/*.scss',['styles']);
 });
 
 gulp.task('icons', function() {
@@ -19,7 +18,7 @@ gulp.task('icons', function() {
         .pipe(gulp.dest('./fonts'));
 });
 
-gulp.task('sass', function () {
+gulp.task('styles', function () {
     return sass(['./resources/sass/*.scss',
         config.nodeDir + '/font-awesome/scss/*.scss'], { sourcemap: true })
         .on('error', sass.logError)
