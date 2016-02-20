@@ -1,12 +1,12 @@
 (function () {
     angular
-        .module('gkeApp.games', [])
+        .module('gkeApp.games')
 
-        .controller('GamesCtrl', function GamesCtrl() {
+        .controller('GamesBrowseCtrl', function GamesBrowseCtrl() {
             this.count = 4;
         })
 
-        .component('games', {
+        .component('gamesBrowse', {
             bindings: {
                 count: '='
             },
@@ -20,7 +20,7 @@
                 this.increment = increment;
                 this.decrement = decrement;
             },
-            templateUrl : 'js/app/modules/games/components/games.html'
+            templateUrl : 'js/app/modules/games/components/games-browse.html'
         });
 
 })();
