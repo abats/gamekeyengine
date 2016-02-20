@@ -1,6 +1,7 @@
 (function () {
-    var app = angular.module('gkeApp', []);
+    angular.module('gkeApp', [
+        'gkeApp.games'
 
-    console.log('loading gamekey engine');
+    ]);
 
 })();

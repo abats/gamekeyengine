@@ -54,7 +54,9 @@
             <div class="panel panel-default">
                 <div class="panel-heading">Dashboard</div>
                 <div class="panel-body">
-                    Hoi
+                    <div ng-controller="GamesCtrl as vm">
+                        <games count="vm.count"></games>
+                    </div>
                 </div>
             </div>
         </div>
@@ -62,8 +64,10 @@
 </div>
 
 <!-- JavaScripts -->
-<script src="node_modules/angular/angular.min.js"></script>
+<script data-require="angular.js@1.5.x" src="https://code.angularjs.org/1.5.0/angular.js" data-semver="1.5.0"></script>
+<!--<script src="node_modules/angular/angular.min.js"></script>-->
 <script src="js/app/app.js"></script>
+<script src="js/app/modules/games/components/games.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
