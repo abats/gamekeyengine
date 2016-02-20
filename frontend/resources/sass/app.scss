@@ -4,6 +4,15 @@ $input-border-radius: 0px;
 
 @import '../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
 @import url(https://fonts.googleapis.com/css?family=Raleway:700,800);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:600,700);
+
+body {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 14px;
+  	color: #363636;
+  	font-weight: 600;
+  	letter-spacing: 0.05em;
+}
 
 .logo {
   	font-family: 'Raleway', sans-serif;
