@@ -10,7 +10,10 @@
             bindings: {
                 count: '='
             },
-            controller: function () {
+            controller: function (gamesService) {
+
+                $inject = ['gamesService'];
+
                 function increment() {
                     this.count++;
                 }
@@ -19,8 +22,15 @@
                 }
                 this.increment = increment;
                 this.decrement = decrement;
+
+                gamesService.search('batman').success(function(response){
+                    console.log(response);
+                }).error(function(response){
+                    console.log('bingbangerrordingdong');
+                });
             },
             templateUrl : 'js/app/modules/games/components/games-browse.html'
+
         });
 
 })();
