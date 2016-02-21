@@ -13,11 +13,19 @@ class CreateGamesTable extends Migration
     public function up()
     {
         Schema::create('games', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments ('id')->index();
 
-            // adding specific fields here...
-            $table->string('title');
-            $table->string('description');
+            $table->integer('igdb_id')->unsigned()->nullable();
+            $table->integer('tgdb_id')->unsigned()->nullable();
+            $table->integer('gb_id')->unsigned()->nullable();
+            $table->string('name');
+            $table->string('release_date')->nullable();
+            $table->string('rating')->nullable();
+            $table->string('unique_name');
+            $table->string('poster')->nullable();
+            $table->string('banner')->nullable();
+            $table->string('fanart')->nullable();
+            $table->dateTime('media_last_updated')->nullable();
 
             $table->timestamps();
         });

@@ -14,6 +14,9 @@ $api->version('v1', function ($api) {
 	$api->post('auth/recovery', 'App\Api\V1\Controllers\AuthController@recovery');
 	$api->post('auth/reset', 'App\Api\V1\Controllers\AuthController@reset');
 
+	$api->get('games/random', 'App\Api\V1\Controllers\GamesController@getRandom');
+	$api->get('games/search/{query}', 'App\Api\V1\Controllers\GamesController@search');
+
 	// example of protected route
 	$api->get('protected', ['middleware' => ['api.auth'], function () {		
 		return \App\User::all();
