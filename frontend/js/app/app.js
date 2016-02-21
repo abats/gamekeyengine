@@ -1,6 +1,7 @@
 (function () {
     angular.module('gkeApp', [
-        'gkeApp.games'
+        'gkeApp.games',
+        'gkeApp.services'
 
     ]);
 
