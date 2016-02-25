@@ -18,6 +18,7 @@ class CreateGamesTable extends Migration
             $table->integer('igdb_id')->unsigned()->nullable();
             $table->integer('tgdb_id')->unsigned()->nullable();
             $table->integer('gb_id')->unsigned()->nullable();
+            $table->integer('steam_id')->unsigned()->nullable();
             $table->string('name');
             $table->string('release_date')->nullable();
             $table->string('rating')->nullable();

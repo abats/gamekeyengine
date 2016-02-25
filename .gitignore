@@ -8,3 +8,4 @@ composer.lock
 .sass-cache
 frontend/fonts/
 frontend/css
+backend/composer.phar
