@@ -2,15 +2,17 @@
     angular
         .module('gkeApp.games')
 
-        .controller('GamesBrowseCtrl', function GamesBrowseCtrl() {
+        .controller('GamesFrontpageListCtrl', function GamesFrontpageListCtrl() {
             this.count = 4;
+            this.games = {};
         })
 
-        .component('gamesBrowse', {
+        .component('gamesFrontpageList', {
             bindings: {
                 count: '='
             },
             controller: function (gameService) {
+                var vm = this;
 
                 function increment() {
                     this.count++;
@@ -21,11 +23,16 @@
                 this.increment = increment;
                 this.decrement = decrement;
 
-                var searchTest = gameService.search('batman');
+                var testCall = gameService.getTop();
 
-                console.log(searchTest);
+                console.log(testCall);
+
+                testCall.then(function(data){
+                    vm.games = data;
+                })
+
             },
-            templateUrl : 'js/app/modules/games/components/games-browse.html'
+            templateUrl : 'js/app/modules/games/components/games-frontpage-list.html'
 
         });
 
