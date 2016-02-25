@@ -16,6 +16,7 @@ $api->version('v1', function ($api) {
 
 	$api->get('games/random', 'App\Api\V1\Controllers\GamesController@getRandom');
 	$api->get('games/search/{query}', 'App\Api\V1\Controllers\GamesController@search');
+	$api->get('games/top', 'App\Api\V1\Controllers\GamesController@top');
 
 	// example of protected route
 	$api->get('protected', ['middleware' => ['api.auth'], function () {		

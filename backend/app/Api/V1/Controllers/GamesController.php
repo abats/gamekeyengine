@@ -28,4 +28,11 @@ class GamesController extends Controller
         return response()->json(Games::where('name', 'LIKE', '%'.$query.'%')->get());
     }
 
+    public function top(){
+        return response()->json(Games::where('release_date', '>', '2016-01-01')
+            ->where('release_date', '<', date("Y-m-d"))->get()->random(12));
+    }
+
+
+
 }

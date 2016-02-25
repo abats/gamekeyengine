@@ -11,10 +11,6 @@
 |
 */
 
-//TODO; VERY TEMPORARY
-header('Access-Control-Allow-Origin: *');
-header('Access-Control-Allow-Headers: Origin, Content-Type');
-
 $app = new Illuminate\Foundation\Application(
     realpath(__DIR__.'/../')
 );

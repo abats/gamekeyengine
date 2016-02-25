@@ -34,6 +34,7 @@ class IGDBService {
 	 * Get game details
 	 */
     public function getGameMeta($gameId){
+		return self::request('games/' . $gameId . '/');
 
     }
 
@@ -64,7 +65,12 @@ class IGDBService {
 			$url .= "?" . implode("&", $optUrl);
 		}
 
-		$url = $url . "&token=" . $this->key;
+		if(!$opts){
+			$url = $url . "?token=" . $this->key;
+		}else{
+			$url = $url . "&token=" . $this->key;
+		}
+
 
 		$opts = array(
 			'http' => array(
