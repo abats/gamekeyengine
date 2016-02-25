@@ -1,5 +1,5 @@
 (function () {
     angular
-        .module('gkeApp.games', ['gkeApp.services'])
+        .module('gkeApp.games', [])
 
 })();
