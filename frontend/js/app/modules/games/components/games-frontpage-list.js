@@ -3,7 +3,6 @@
         .module('gkeApp.games')
 
         .controller('GamesFrontpageListCtrl', function GamesFrontpageListCtrl() {
-            this.count = 4;
             this.games = {};
         })
 
@@ -11,29 +10,26 @@
             bindings: {
                 count: '='
             },
-            controller: function (gameService) {
-                var vm = this;
-
-                function increment() {
-                    this.count++;
-                }
-                function decrement() {
-                    this.count--;
-                }
-                this.increment = increment;
-                this.decrement = decrement;
-
-                var testCall = gameService.getTop();
-
-                console.log(testCall);
-
-                testCall.then(function(data){
-                    vm.games = data;
-                })
-
-            },
+            controller : gamesFrontPageListController,
             templateUrl : 'js/app/modules/games/components/games-frontpage-list.html'
 
         });
+
+        function gamesFrontPageListController(gameService){
+            var vm = this;
+
+            init();
+
+            function init(){
+                gamesListServiceCall();
+            }
+
+            function gamesListServiceCall(){
+                var gamesCall = gameService.getTop();
+                gamesCall.then(function(data){
+                    vm.games = data;
+                })
+            }
+        }
 
 })();

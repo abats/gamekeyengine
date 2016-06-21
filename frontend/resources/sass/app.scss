@@ -1,6 +1,7 @@
 $navbar-default-bg: white;
 $navbar-default-border: transparent;
 $input-border-radius: 0px;
+$btn-border-radius-base: 0px;
 
 @import '../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
 @import url(https://fonts.googleapis.com/css?family=Raleway:700,800);
@@ -25,7 +26,7 @@ body {
 
 .navbar-default .navbar-nav > li > a,
 .navbar-default .navbar-nav > li > a:hover,
-.navbar-default .navbar-nav > li > a:focus,
+.navbar-default .navbar-nav > li > a:focus
  {
  	font-family: 'Raleway', sans-serif;
   	font-size: 14px;
@@ -39,7 +40,7 @@ body {
  }
 
 .navbar-default .navbar-nav > li > a:hover,
-.navbar-default .navbar-nav > li > a:focus,
+.navbar-default .navbar-nav > li > a:focus
  {
  	border-bottom: 2px solid #6cb7a6; 	
  }
@@ -103,7 +104,7 @@ div.data-table {
   margin-top: 15px;
 
    table > thead > tr > th, table > tbody > tr > td {
-      border-bottom: 1px solid #ebebeb; 
+      border-bottom: 1px solid #ebebeb;
    }
 }
 
@@ -114,5 +115,4 @@ button.btn-shop:focus {
   color: white;
   height: 25px;
   padding: 3px 6px 3px 6px;
-  border-radius: 0px;
 }

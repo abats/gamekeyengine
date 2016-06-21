@@ -1,7 +1,6 @@
 <div class="data-table">
     <table class="table">
         <thead>
-        <th></th>
         <th>TITLE</th>
         <th>EDITION</th>
         <th>PLATFORM</th>
@@ -14,7 +13,6 @@
         </thead>
         <tbody>
         <tr ng-repeat="game in $ctrl.games">
-            <td></td>
             <td>{{ game.name }}</td>
             <td>...</td>
             <td>....</td>
@@ -23,7 +21,7 @@
             <td>....</td>
             <td>......</td>
             <td>.....</td>
-            <td><button class="btn btn-shop">SHOP</button></td>
+            <td class="text-right"><button class="btn btn-shop">SHOP</button></td>
         </tr>
         </tbody>
     </table>

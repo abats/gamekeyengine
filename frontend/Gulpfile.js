@@ -1,7 +1,12 @@
 var gulp = require('gulp'),
-    sass = require('gulp-ruby-sass')
-    notify = require("gulp-notify")
-    bower = require('gulp-bower');
+    sass = require('gulp-ruby-sass'),
+    notify = require("gulp-notify"),
+    serve = require('gulp-serve');
+
+gulp.task('serve', serve({
+    root: ['./'],
+    port: 9000
+}));
 
 var config = {
     sassPath: './resources/sass',
